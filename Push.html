@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>push</title>
+        <body>
+            Enter the city:<input type="text" id="a">
+            <input type="button" value="submit" demo onclick="add()">
+            <ul id="demo"></ul>
+            <script>
+                data[i];
+                function add()
+                {
+                    var city=document.getElementById("+a").value;
+                    data.push(city);
+                    city=document.getElementById("a").value=" ";
+                    display();
+
+                }
+                  function display();
+                  {
+                      var a=" ";
+                      for(i=0;i<data.length;i++)
+                      a+=" <li>"+data[i]+"</li>"
+                      document.getElementById("demo").innerHTML=a;
+
+                  }
+            </script>
+
+        </body>
+    </head>
+</html>

@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>TataConsulting</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+              
+    </head>
+    <body>
+        <div class ="container">
+            <form style="background-color: skyblue;" >
+         <div class="panel panel-info">
+         <div class="panel panel-heading">
+             
+             <h1 style="text-align:center;background-color:aliceblue">TataConsultingService</h1>
+        
+             <label>Month</label>
+             <select id ="month">
+                 <option>January</option>
+                 <option>Feburary</option>
+                 <option>March</option>
+                 <option>April</option>
+                 <option>May</option>
+                 <option>June</option>
+                 <option>July</option>
+                 <option>August</option>
+                 <option>September</option>
+                 <option>Octomber</option>
+                 <option>November</option>
+                 <option>December</option>
+             </select>
+             <label>YEAR</label>
+             <select id="year">
+                 <option>2010</option>
+                 <option>2011</option>
+                 <option>2012</option>
+                 <option>2013</option>
+                 <option>2014</option>
+                 <option>2015</option>
+                 <option>2016</option>
+                 <option>2017</option>
+                 <option>2018</option>
+                 <option>2019</option>
+                 <option>2020</option>
+                 <option>2021</option>
+             </select>
+         </div>
+ 
+                <div class="panel body">
+                
+                 <div class="panel body" style="margin: 10px;" >
+        
+                   <label>EmployeeId:</label>
+          <input type="number" id="e_id" onchange="add()" class="form-control"> <br />
+                  
+                    <label>EmployeeName:</label>
+
+      
+          <input type="text" id="e_name" onchange="add()" class="form-control"> <br />
+           
+                     <label>BasicSalary:</label>
+
+           <input type="number" id="basic_sal" onchange="add()" class="form-control"> <br />
+                
+                      <label>DearnessAllowance:</label>
+  
+           <input type="number" id="dA" onchange="add()"class="form-control" > <br />
+                
+                       <label>Pensionfund:</label>
+                       
+           <input type="number" id="pF" onchange="add()" class="form-control"> <br >
+
+                      <label>Netsalary:</label>
+
+            <input type="number" id="net_sal" onchange="add()" class="form-control"> <br />
+       
+        <input type="button" value="ADD" onclick="dis()">
+        <p id="demo"></p>
+        </form>
+        </div>
+
+        <script>
+            function add()
+            {
+                var e_id1= Number(document.getElementById ("e_id").value);
+                var e_Name = document.getElementById ("e_name").value;
+                var basic_sal1= Number(document.getElementById ("basic_sal").value);
+                var dA1= basic_sal1 / 15;
+                document.getElementById("dA").value=dA1;
+                 
+                var pF1 = basic_sal1 /10;
+                 document.getElementById("pF").value = pF1;
+
+                 var net_sal1= (basic_sal1+ dA1) - pF1;
+                 document.getElementById("net_sal").value = net_sal1;
+                 
+
+            }
+            function dis()
+            { 
+                
+                var e_id = Number(document.getElementById('e_id').value);
+                var e_Name =  document.getElementById('e_name').value;
+                var basic_sal= Number(document.getElementById("basic_sal").value);
+                var dA=Number(document.getElementById("dA").value );
+                var pF=Number(document.getElementById("pF").value);
+
+                var net_sal=Number(document.getElementById("net_sal").value);
+                document.getElementById("demo").innerHTML = "e_id" + e_id + "<br>" +
+                                                                "e_name" + e_Name + "<br>" + 
+                                                                "basic_salary"  +  basic_sal + "<br>"  + 
+                                                                "dA" + dA +"<br" +
+                                                                "pF" + pF + "<br>" + "net_sal" + net_sal + "<br>";           
+            }
+        </script>
+         </div>
+            
+        
+    </body>
+</html>

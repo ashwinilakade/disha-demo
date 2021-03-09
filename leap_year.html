@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+         leap year 
+    </title> 
+</head> 
+  
+<body> 
+    Leap year: <input type="number" id = "year"> 
+      
+    <input type="button" id="button" onClick="LeapYear()"
+            value="Leap Year"> 
+      
+    <p id="Demo"></p> 
+      
+
+    <script> 
+        function isLeapYear()
+        
+         { 
+            var year= document.getElementById("year").value; 
+            if (year % 4 == 0)
+         {
+
+        
+            document .write("leap year");
+                document.getElementById("Demo").innerHTML = year;
+            }
+            else
+
+            {
+                document .write("not leap year");
+                document.getElementById("Demo").innerHTML =year;
+            
+                
+        }
+    </script> 
+</body> 
+  
+</html>                     

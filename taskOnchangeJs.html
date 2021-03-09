@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Onchange</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+              
+    </head>
+    <body>
+        Roll No:<input type="text" id="txt1" onchange="add()"> <br />
+        <br />
+        Name:<input type="text" id="txt2" onchange="add()"> <br />
+        <br />
+        Html:<input type="text" id="txt3" onchange="add()"> <br />
+        <br />
+        css:<input type="text" id="txt4" onchange="add()"> <br />
+        <br />
+        Javascript:<input type="text" id="txt5" onchange="add()"/> <br />
+        <br />
+        Total:<input type="text" id="txt6" onchange="add()"> <br />
+        <br />
+        Percentage;<input type="text" id="txt7" onchange="add()">
+        <br />
+        <input type="button" value="ADD" onclick="dis()">
+        <p id="demo"></p>
+        <script>
+            function add()
+            {
+                var Html = Number(document.getElementById ("txt3").value)
+                var Css = Number(document.getElementById ("txt4").value)
+                var Javascript = Number(document.getElementById ("txt5").value) 
+                var add=Html+Css+Javascript;
+                var percentage=add/3;
+                document.getElementById("txt6").value=add;
+                document.getElementById("txt7").value=percentage;
+                
+            }
+            function dis()
+            {
+                var rollno= Number(document.getElementById ("txt1").value)
+                var name = document.getElementById ("txt2").value
+                var total = Number(document.getElementById ("txt6").value) 
+                var percentage = Number(document.getElementById ("txt7").value)
+                
+                document.getElementById("demo").innerHTML="RollNo:" + rollno+ "<br>" + "Name:" + name + "<br>" + "Total:" + "total:" + total + "<br>" + "percentage" + percentage + "<br>";            }
+        </script>
+    </body>
+</html>
+        

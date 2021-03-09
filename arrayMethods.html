@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>arrayMethods</title>
+    </head>
+    <body>
+        <button onclick="myfunction()">submit</button>
+        <p id="demo">
+            <script>
+                var Fruits =["Banana","Orange","Apple","Mango"];
+                document.getElementById("demo").innerHTML=Fruits;
+                function myfunction()
+                {
+                    Fruits.push("kiwi");
+                    document.getElementById("demo").innerHTML=Fruits;
+
+                }
+
+            </script>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Onchange</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+              
+    </head>
+    <body>
+        First No:<input type="text" id="txt1" onchange="add()">
+        second No:<input type="text" id="txt2" onchange="add()">
+        Answer:<input type="text" id="txt3">
+        <script>
+            function add()
+            {
+                var no1 = Number(document.getElementById ("txt1").value)
+                var no2 = Number(document.getElementById ("txt2").value) 
+                var add=no1+no2;
+                document.getElementById("txt3").value=add;
+
+            }
+        </script>
+        
+    </body>
+</html>

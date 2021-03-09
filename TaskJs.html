@@ -1,0 +1,35 @@
+<html>
+<head>
+<body>
+   RollNO: <input type="text" id="txt1"> <br />
+   <br />
+    Name :<input type="text" id="txt2"> <br />
+    <br />
+    Subject 1:<input type="text" id="txt3"> <br />
+    <br />
+
+    Subject 2:<input type="text" id="txt4"> <br />
+    <br />
+    Subject 3:<input type="text" id="txt5"> <br />
+    <input type="button" value ="add" onclick="Add()"/>
+    <h1 id="Demo"></h1>
+    <script>
+        function Add()
+        {
+            var numA=Number(document.getElementById("txt1").value);
+            var numB=Number(document.getElementById("txt2").value);
+            var num1=Number(document.getElementById("txt3").value);
+
+            var num2=Number(document.getElementById("txt4").value);
+            var num3=Number(document.getElementById("txt5").value);
+
+            var total=num1+num2+num3;
+            document.getElementById("Demo"). innerHTML = numA;
+            document.getElementById("Demo"). innerHTML = numB;
+
+            document.getElementById("Demo"). innerHTML = total;
+        }
+    </script>
+    </body>
+</head>
+</html>

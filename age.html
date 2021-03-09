@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>if_else</title>
+    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <body>
+    
+
+                   <label>Enter Age</label>
+                <input type="Number" id="txt1">
+                
+            
+             <input type="button" value="submit" onclick="add()">
+             <p id="Demo"></p>
+             <script>
+    
+                function add()
+                {
+                    var age;
+                     age=Number(document.getElementById("txt1").value);
+                     if(age>=18)
+                {
+                    document .write("age is minor")
+                    document.getElementById("Demo").innerHTML =age;
+                }
+                else
+                {
+                    document .write("age is major")
+                    document.getElementById("Demo").innerHTML = age;
+                
+                }
+                }
+                
+           </script>
+        
+             
+    
+   </body>
+
+   </html>

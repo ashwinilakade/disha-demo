@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>jsonArray</title>
+</head>
+
+<body>
+    RollNo:<input type="number" id="listnumber">
+    Name:<input type="text" id="text1">
+    HTML:<input type="text" id="text2">
+    CSS:<input type="text" id="text3">
+    Javascript:<input type="text" id="text4">
+    <input type="button" value="ADD" onclick="add()">
+    <table border="1">
+        <tr>
+            <th>RollNo</th>
+            <th>Name</th>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>Javascript</th>
+        </tr>
+        <tbody id="listtable"></tbody>
+
+    </table>
+    <script>
+        var data = [];
+        function add() {
+            var rollNo1 = document.getElementById("listnumber").value;
+            var Name1 = document.getElementById("text1").value;
+            var HTML1 = document.getElementById("text2").value;
+            var CSS1 = document.getElementById("text3").value;
+            var Javascript1 = document.getElementById("text4").value;
+            data.push({ "RollNo": rollNo1, "Name": Name1, "HTML": HTML1, "CSS": CSS1, "JavaScript": Javascript1 });
+            disp();
+        }
+
+        function disp() {
+            var t1 = " ";
+            for (i = 0; i < data.length; i++) {
+                t1 += "<tr><td>" + data[i].RollNo + "<td>" + data[i].Name + "<td>" + data[i].HTML + "<td>" + data[i].CSS + "<td>" + data[i].JavaScript + "</td></tr>";
+
+            }
+            document.getElementById("listtable").innerHTML = t1;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+ <html>
+     <head>
+         <title>jsonArray</title>
+     </head>
+     <body>
+         Name:<input type="text" id="a">
+         Mobile:<input type="Number" id="b">
+         <input type="button" value ="ADD" onclick ="add()">
+         <table border="1">
+             <tr>
+                 <th>Name</th>
+                 <th>Mobile</th>
+                
+             </tr>
+             <tbody id="demo"></tbody>
+             </table>
+             <script>
+                 var data=[];
+                 function add()
+                 {
+                     var name=document.getElementById("a").value;
+                     var mobile=document.getElementById("b").value;
+                     data.push({"Name":name,"Mobile":mobile});
+                     disp();
+                 }
+                 function disp()
+                {
+                    var t1="";
+                    for(i=0;i<data.length;i++)
+                    {
+                        t1+="<tr><td>"+data[i].Name+"<td>"+data[i].Mobile+"</td></tr>";
+                    }
+                    document.getElementById("demo").innerHTML=t1;
+                }
+             </script>
+
+         </table>
+     </body>
+ </html>
